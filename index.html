@@ -1,60 +1,586 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garden State Coffee</title>
+    <meta name="description" content="Garden State Coffee — New Jersey's premier specialty coffee experience. Ethically sourced, craft roasted, community-driven.">
+    <title>Garden State Coffee | Specialty Coffee, Haddonfield NJ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Garden State Coffee</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav" id="nav">
+        <div class="nav__container">
+            <a href="#home" class="nav__logo">Garden State <em>Coffee</em></a>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="#menu" class="nav__link">Menu</a></li>
+                <li><a href="#origin" class="nav__link">Our Beans</a></li>
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#community" class="nav__link">Events</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+            <div class="nav__actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="icon icon--sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon icon--moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="#menu" class="btn btn--primary nav__cta">Order Now</a>
+                <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
     <section class="hero" id="home">
-        <div class="hero-text">
-            <h2>Welcome to Garden State Coffee</h2>
-            <p>Your go-to source for the best coffee in New Jersey.</p>
-            <button>Order Now</button>
+        <div class="hero__content">
+            <div class="hero__eyebrow reveal">
+                <span class="live-dot" aria-hidden="true"></span>
+                Roasting Today &mdash; Ethiopian Yirgacheffe
+            </div>
+            <h1 class="hero__title reveal">
+                <span class="hero__line">Craft.</span>
+                <span class="hero__line hero__line--accent">Origin.</span>
+                <span class="hero__line">Community.</span>
+            </h1>
+            <p class="hero__sub reveal">
+                Every cup tells a story &mdash; from Ethiopian highlands to Haddonfield, New Jersey. Specialty coffee roasted with intention, served without pretension.
+            </p>
+            <div class="hero__cta reveal">
+                <a href="#menu" class="btn btn--primary btn--lg">Explore the Menu</a>
+                <a href="#origin" class="btn btn--ghost btn--lg">Our Sourcing &darr;</a>
+            </div>
         </div>
-        <div class="hero-image">
-            <img src="images/coffee.jpg" alt="Inside Our Store">
+        <div class="hero__visual reveal">
+            <div class="hero__img-wrap">
+                <img src="images/coffee.jpg" alt="Inside Garden State Coffee — warm string lights, wood bar, cozy atmosphere" class="hero__img" loading="eager" fetchpriority="high">
+                <div class="hero__badge" aria-label="100% ethically sourced">
+                    <span class="hero__badge-num">100%</span>
+                    <span class="hero__badge-label">Ethically<br>Sourced</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll-hint" aria-hidden="true">
+            <span>Scroll</span>
+            <div class="hero__scroll-line"></div>
         </div>
     </section>
-    <section class="features">
-        <div class="feature-card">
-        <h3>Fresh Coffee</h3>
-        <p>Locally roasted beans brewed fresh every morning.</p>
+
+    <!-- ===== TICKER ===== -->
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+            <span>Specialty Roasts</span><span class="ticker__sep">&middot;</span>
+            <span>Nitro Cold Brew</span><span class="ticker__sep">&middot;</span>
+            <span>Adaptogen Lattes</span><span class="ticker__sep">&middot;</span>
+            <span>Ethically Sourced</span><span class="ticker__sep">&middot;</span>
+            <span>Community First</span><span class="ticker__sep">&middot;</span>
+            <span>Haddonfield, NJ</span><span class="ticker__sep">&middot;</span>
+            <span>Zero Waste Initiative</span><span class="ticker__sep">&middot;</span>
+            <span>Small-Batch Roasting</span><span class="ticker__sep">&middot;</span>
+            <span>Specialty Roasts</span><span class="ticker__sep">&middot;</span>
+            <span>Nitro Cold Brew</span><span class="ticker__sep">&middot;</span>
+            <span>Adaptogen Lattes</span><span class="ticker__sep">&middot;</span>
+            <span>Ethically Sourced</span><span class="ticker__sep">&middot;</span>
+            <span>Community First</span><span class="ticker__sep">&middot;</span>
+            <span>Haddonfield, NJ</span><span class="ticker__sep">&middot;</span>
+            <span>Zero Waste Initiative</span><span class="ticker__sep">&middot;</span>
+            <span>Small-Batch Roasting</span><span class="ticker__sep">&middot;</span>
+        </div>
     </div>
-    <div class="feature-card">
-        <h3>Fast Service</h3>
-        <p>Quick pickup and friendly staff ready to help.</p>
-    </div>
-    <div class="feature-card">
-        <h3>Cozy Atmosphere</h3>
-        <p>Relax with great coffee, music, and free Wi-Fi.</p>
-    </div>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="features__grid">
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>
+                    </div>
+                    <h3>Craft Roasted Daily</h3>
+                    <p>Single-origin and blended roasts prepared in small batches every morning. No stale beans, no shortcuts &mdash; ever.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="m7 7 5-5 5 5"/><path d="M20 12H4"/><path d="m17 17 3 3-3 3"/><path d="m7 17-3 3 3 3"/></svg>
+                    </div>
+                    <h3>Functional Brews</h3>
+                    <p>Adaptogen lattes, mushroom mochas, and precision-chilled nitro cold brew. Coffee designed for how you actually live.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <h3>Neighborhood Anchor</h3>
+                    <p>Free Wi-Fi, rotating local art, and a weekly events calendar. We&rsquo;re more than a caf&eacute; &mdash; we&rsquo;re a community hub.</p>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- ===== MENU ===== -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">What We Brew</span>
+                <h2 class="section-title">The Menu</h2>
+                <p class="section-sub">From our signature espresso to tomorrow&rsquo;s functional brew &mdash; there&rsquo;s a cup for every moment.</p>
+            </div>
+            <div class="menu__tabs" role="tablist" aria-label="Menu categories">
+                <button class="menu__tab menu__tab--active" data-tab="espresso" role="tab" aria-selected="true" aria-controls="tab-espresso">Espresso</button>
+                <button class="menu__tab" data-tab="cold" role="tab" aria-selected="false" aria-controls="tab-cold">Cold Craft</button>
+                <button class="menu__tab" data-tab="functional" role="tab" aria-selected="false" aria-controls="tab-functional">Functional</button>
+                <button class="menu__tab" data-tab="food" role="tab" aria-selected="false" aria-controls="tab-food">Food</button>
+            </div>
+
+            <div id="tab-espresso" class="menu__panel menu__panel--active" role="tabpanel">
+                <div class="menu__grid">
+                    <div class="menu-item reveal">
+                        <div class="menu-item__top"><h4>Garden State Blend</h4><span class="menu-item__price">$4.50</span></div>
+                        <p>Dark chocolate, brown sugar, and a clean finish. Our signature roast &mdash; the daily driver you&rsquo;ll come back for.</p>
+                        <div class="menu-item__tags"><span>Signature</span></div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item__top"><h4>Single Origin Pour Over</h4><span class="menu-item__price">$6.00</span></div>
+                        <p>Rotating single-origin feature. Ask your barista what&rsquo;s on the bar today &mdash; it changes with the harvest season.</p>
+                        <div class="menu-item__tags"><span>Rotating</span><span>Pour Over</span></div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item__top"><h4>Honey Process Cortado</h4><span class="menu-item__price">$5.25</span></div>
+                        <p>Ethiopian honey-process beans, steamed whole milk. Delicate fruit notes balanced by a rich, smooth body.</p>
+                        <div class="menu-item__tags"><span>Seasonal</span></div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item__top"><h4>Macchiato Classico</h4><span class="menu-item__price">$4.75</span></div>
+                        <p>Two shots, a kiss of microfoam, nothing more. A proper espresso macchiato &mdash; pure and precise.</p>
+                        <div class="menu-item__tags"><span>Classic</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-cold" class="menu__panel" role="tabpanel">
+                <div class="menu__grid">
+                    <div class="menu-item reveal">
+                        <div class="menu-item__top"><h4>Nitro Cold Brew</h4><span class="menu-item__price">$6.50</span></div>
+                        <p>18-hour cold brew on nitrogen. Cascading pour, creamy head, no dairy needed. Silky and relentlessly bold.</p>
+                        <div class="menu-item__tags"><span>Nitrogen</span><span>Dairy-Free</span></div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item__top"><h4>Cold Brew Tonic</h4><span class="menu-item__price">$5.75</span></div>
+                        <p>House cold brew over premium tonic water and ice. Bright, effervescent, and unexpectedly complex.</p>
+                        <div class="menu-item__tags"><span>Sparkling</span></div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item__top"><h4>Precision Iced Latte</h4><span class="menu-item__price">$5.50</span></div>
+                        <p>Flash-chilled double espresso over oat milk and clear cube ice. No dilution. No compromise.</p>
+                        <div class="menu-item__tags"><span>Oat Milk</span></div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item__top"><h4>Brown Sugar Shaken</h4><span class="menu-item__price">$5.75</span></div>
+                        <p>Espresso shaken with house-made brown sugar syrup and cinnamon over ice. Sweet but never cloying.</p>
+                        <div class="menu-item__tags"><span>Sweet</span><span>Best Seller</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-functional" class="menu__panel" role="tabpanel">
+                <div class="menu__grid">
+                    <div class="menu-item reveal">
+                        <div class="menu-item__top"><h4>Adaptogen Latte</h4><span class="menu-item__price">$7.50</span></div>
+                        <p>Espresso with ashwagandha, reishi, and steamed oat milk. Calm energy, no crash. Your new morning ritual.</p>
+                        <div class="menu-item__tags"><span>Adaptogen</span><span>Wellness</span></div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item__top"><h4>Mushroom Mocha</h4><span class="menu-item__price">$7.75</span></div>
+                        <p>Lion&rsquo;s mane and chaga mushroom extract with espresso and rich cacao. Sharpen your focus.</p>
+                        <div class="menu-item__tags"><span>Nootropic</span><span>Vegan</span></div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item__top"><h4>Protein Coffee</h4><span class="menu-item__price">$7.00</span></div>
+                        <p>Double espresso blended with whey or plant protein, cacao, and almond milk. Pre-workout, elevated.</p>
+                        <div class="menu-item__tags"><span>Protein</span><span>+Plant Option</span></div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item__top"><h4>Turmeric Spice Latte</h4><span class="menu-item__price">$6.75</span></div>
+                        <p>Golden milk meets espresso &mdash; turmeric, black pepper, cardamom, and ginger with steamed coconut milk.</p>
+                        <div class="menu-item__tags"><span>Anti-inflammatory</span><span>Vegan</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-food" class="menu__panel" role="tabpanel">
+                <div class="menu__grid">
+                    <div class="menu-item reveal">
+                        <div class="menu-item__top"><h4>Avocado Sourdough Toast</h4><span class="menu-item__price">$10.00</span></div>
+                        <p>Local sourdough, smashed avocado, everything seasoning, microgreens. Sourced from Philly Bread Co.</p>
+                        <div class="menu-item__tags"><span>Vegan</span><span>Local</span></div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item__top"><h4>Almond Croissant</h4><span class="menu-item__price">$5.50</span></div>
+                        <p>Flaky butter croissant, almond cream filling, toasted slivered almonds on top. Baked in-house daily.</p>
+                        <div class="menu-item__tags"><span>Baked In-House</span></div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item__top"><h4>Seasonal Grain Bowl</h4><span class="menu-item__price">$13.00</span></div>
+                        <p>Rotating grain bowl with seasonal vegetables, local eggs or tofu, and house-made tahini dressing.</p>
+                        <div class="menu-item__tags"><span>Seasonal</span><span>+Vegan Option</span></div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item__top"><h4>Cardamom Banana Bread</h4><span class="menu-item__price">$4.50</span></div>
+                        <p>Our signature bake &mdash; banana bread spiced with cardamom, topped with brown butter oat streusel.</p>
+                        <div class="menu-item__tags"><span>Vegan</span><span>Fan Favorite</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ORIGIN ===== -->
+    <section class="origin" id="origin">
+        <div class="origin__inner">
+            <div class="origin__content reveal">
+                <span class="section-tag">Transparency First</span>
+                <h2 class="section-title">From the Farm.<br><em>To Your Cup.</em></h2>
+                <p>We believe you deserve to know exactly where your coffee comes from. Every bean we source is traceable to the farm, the farmer, and the harvest date. We pay above Fair Trade minimums &mdash; because good coffee costs what it actually costs to produce ethically.</p>
+                <div class="origin__stats">
+                    <div class="origin__stat">
+                        <span class="stat-num" data-count="12">0</span>
+                        <span class="stat-label">Origin Countries</span>
+                    </div>
+                    <div class="origin__stat">
+                        <span class="stat-num" data-count="34">0</span>
+                        <span class="stat-label">Farm Partners</span>
+                    </div>
+                    <div class="origin__stat">
+                        <span class="stat-num" data-count="140">0</span><span class="stat-suffix">%</span>
+                        <span class="stat-label">of Fair Trade Min.</span>
+                    </div>
+                </div>
+                <a href="#about" class="btn btn--outline">Our Full Story &rarr;</a>
+            </div>
+            <div class="origin__regions reveal">
+                <div class="origin__region-list">
+                    <div class="origin__region">
+                        <div class="origin__dot" aria-hidden="true"></div>
+                        <div><strong>Ethiopia</strong><span>Yirgacheffe &middot; Honey Process</span></div>
+                    </div>
+                    <div class="origin__region">
+                        <div class="origin__dot" aria-hidden="true"></div>
+                        <div><strong>Colombia</strong><span>Huila &middot; Washed</span></div>
+                    </div>
+                    <div class="origin__region">
+                        <div class="origin__dot" aria-hidden="true"></div>
+                        <div><strong>Guatemala</strong><span>Antigua &middot; Natural</span></div>
+                    </div>
+                    <div class="origin__region">
+                        <div class="origin__dot" aria-hidden="true"></div>
+                        <div><strong>Brazil</strong><span>Minas Gerais &middot; Pulped Natural</span></div>
+                    </div>
+                    <div class="origin__region">
+                        <div class="origin__dot" aria-hidden="true"></div>
+                        <div><strong>Kenya</strong><span>Nyeri &middot; AA Washed</span></div>
+                    </div>
+                    <div class="origin__region">
+                        <div class="origin__dot" aria-hidden="true"></div>
+                        <div><strong>Costa Rica</strong><span>Tarraz&uacute; &middot; Washed</span></div>
+                    </div>
+                </div>
+                <blockquote class="origin__quote">
+                    &ldquo;Coffee only tastes as good as the people who grow it are treated.&rdquo;
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
     <section class="about" id="about">
-        <h2>About Us</h2>
-        <p>Garden State Coffee is committed to providing the best coffee experience in New Jersey. 
-            We are committed to providing the highest quality coffee and exceptional service. 
-            We have developed our own unique blend of coffee beans, sourced from the finest farms in the region. 
-            We have also designed our store to provide a comfortable and welcoming environment for all our customers.</p>
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__text reveal">
+                    <span class="section-tag">Who We Are</span>
+                    <h2 class="section-title">Rooted in Jersey.<br><em>Connected to the World.</em></h2>
+                    <p>Garden State Coffee started as a weekend obsession in a Haddonfield kitchen. We were tired of driving across the bridge to Philly for a truly great cup &mdash; so we decided to bring that level of craft right here to New Jersey.</p>
+                    <p>We&rsquo;re obsessed with the full journey: from the terroir of a highland farm to the pour angle on a cortado. Every decision &mdash; from grind size to compostable cups &mdash; is intentional.</p>
+                    <p>We&rsquo;re not trying to be Starbucks. We&rsquo;re not trying to be precious, either. We want to be your neighborhood spot that just <em>happens</em> to serve exceptional coffee.</p>
+                    <div class="about__values">
+                        <div class="about__value">No-pretension quality</div>
+                        <div class="about__value">Neighborhood-first mentality</div>
+                        <div class="about__value">Seasonal, rotating menu</div>
+                        <div class="about__value">Zero-waste commitment</div>
+                    </div>
+                </div>
+                <div class="about__cards reveal">
+                    <div class="about__card">
+                        <h4>Zero Waste Program</h4>
+                        <p>Compostable packaging, in-store collection bins, and a partnership with local farms to repurpose coffee grounds as soil amendment. Zero waste target: 2027.</p>
+                    </div>
+                    <div class="about__card">
+                        <h4>Digital Loyalty</h4>
+                        <p>Our mobile app tracks your orders and rewards loyalty with free drinks, early access to seasonal releases, and behind-the-scenes content from our roasting floor.</p>
+                    </div>
+                    <div class="about__card">
+                        <h4>Local Art Rotation</h4>
+                        <p>Every six weeks, a new local artist&rsquo;s work fills the space. Pieces are available for purchase, with 20% going directly back to the artist.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <button type="submit">Submit</button>
-        </form>
+
+    <!-- ===== COMMUNITY ===== -->
+    <section class="community" id="community">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">More Than Coffee</span>
+                <h2 class="section-title">What&rsquo;s On</h2>
+                <p class="section-sub">Our space is your space. Weekly workshops, pop-ups, and tastings &mdash; check what&rsquo;s coming up.</p>
+            </div>
+            <div class="events__grid">
+                <div class="event-card reveal">
+                    <div class="event-card__date"><span class="event-card__day">14</span><span class="event-card__month">Jun</span></div>
+                    <div class="event-card__body">
+                        <span class="event-card__tag">Workshop</span>
+                        <h4>Home Brewing Masterclass</h4>
+                        <p>Learn pour-over and AeroPress from our head roaster. Beans and equipment provided.</p>
+                        <span class="event-card__time">10:00 AM &mdash; Free</span>
+                    </div>
+                </div>
+                <div class="event-card reveal">
+                    <div class="event-card__date"><span class="event-card__day">19</span><span class="event-card__month">Jun</span></div>
+                    <div class="event-card__body">
+                        <span class="event-card__tag">Pop-Up</span>
+                        <h4>Philly Makers Market</h4>
+                        <p>Five local artisans setting up shop. Ceramics, textiles, prints &mdash; all one-of-a-kind.</p>
+                        <span class="event-card__time">11:00 AM &ndash; 4:00 PM &mdash; Free</span>
+                    </div>
+                </div>
+                <div class="event-card reveal">
+                    <div class="event-card__date"><span class="event-card__day">26</span><span class="event-card__month">Jun</span></div>
+                    <div class="event-card__body">
+                        <span class="event-card__tag">Tasting</span>
+                        <h4>Origin Cupping Session</h4>
+                        <p>Side-by-side tasting of our new Ethiopia, Colombia, and Kenya lots. Guided by our sourcing team.</p>
+                        <span class="event-card__time">6:00 PM &mdash; $15</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- ===== SUSTAINABILITY BANNER ===== -->
+    <section class="sustainability" aria-label="Sustainability commitment">
+        <div class="sustainability__inner reveal">
+            <div class="sustainability__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-.987 2.27-1.975 3.9-2.975 2.12-1.3 4.5-1.025 5.6.025"/><path d="M4 18c1.5-2 3.5-4 6-5.5"/><path d="M9.5 14.5c2.5-1 5.5-1.5 7.5-.5 2 1 2.5 3 1 5.5-2 3-6 3.5-8 .5"/><path d="M12 9c2-4 6-5.5 9-4 2 1 2.5 3.5 1.5 6.5-1.5 4-6 5.5-9 3"/></svg>
+            </div>
+            <div>
+                <h2>Zero waste by 2027. We mean it.</h2>
+                <p>Every cup, bag, and box is compostable or recyclable. Our roasting operation runs on 100% renewable energy. We&rsquo;re not there yet &mdash; but every decision pushes us closer.</p>
+            </div>
+            <a href="#contact" class="btn btn--accent">Get Involved</a>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact__grid">
+                <div class="contact__info reveal">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Come Find Us</h2>
+                    <div class="contact__details">
+                        <div class="contact__detail">
+                            <strong>Address</strong>
+                            <span>42 Kings Highway<br>Haddonfield, NJ 08033</span>
+                        </div>
+                        <div class="contact__detail">
+                            <strong>Hours</strong>
+                            <span>Mon&ndash;Fri: 6:30 AM &ndash; 7:00 PM<br>Sat&ndash;Sun: 7:00 AM &ndash; 8:00 PM</span>
+                        </div>
+                        <div class="contact__detail">
+                            <strong>Email</strong>
+                            <span>hello@gardenstatecoffee.com</span>
+                        </div>
+                    </div>
+                    <div class="contact__social">
+                        <a href="#" class="contact__social-link">Instagram</a>
+                        <a href="#" class="contact__social-link">TikTok</a>
+                        <a href="#" class="contact__social-link">Twitter</a>
+                    </div>
+                </div>
+                <form class="contact__form reveal" id="contactForm" novalidate>
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" required>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="">Select a topic</option>
+                            <option value="catering">Catering Inquiry</option>
+                            <option value="event">Event Hosting</option>
+                            <option value="wholesale">Wholesale Beans</option>
+                            <option value="general">General Question</option>
+                        </select>
+                    </div>
+                    <div class="form__group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us what&rsquo;s on your mind..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="#home" class="footer__logo">Garden State <em>Coffee</em></a>
+                    <p>Specialty coffee roasted with care in Haddonfield, New Jersey. Every cup matters.</p>
+                </div>
+                <div class="footer__col">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#origin">Our Beans</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#community">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h5>Visit</h5>
+                    <ul>
+                        <li>42 Kings Highway</li>
+                        <li>Haddonfield, NJ 08033</li>
+                        <li>Mon&ndash;Fri: 6:30 AM &ndash; 7 PM</li>
+                        <li>Sat&ndash;Sun: 7:00 AM &ndash; 8 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Garden State Coffee. All rights reserved.</p>
+                <p>Roasted with intention. Served with warmth.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    (() => {
+        'use strict';
+
+        // ── Theme ─────────────────────────────────────────────
+        const html = document.documentElement;
+        const themeBtn = document.getElementById('themeToggle');
+        const getSystemTheme = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const applyTheme = (t) => { html.setAttribute('data-theme', t); localStorage.setItem('gsc-theme', t); };
+        applyTheme(localStorage.getItem('gsc-theme') || getSystemTheme());
+        themeBtn.addEventListener('click', () => applyTheme(html.dataset.theme === 'dark' ? 'light' : 'dark'));
+
+        // ── Sticky nav ────────────────────────────────────────
+        const nav = document.getElementById('nav');
+        const markScrolled = () => nav.classList.toggle('nav--scrolled', scrollY > 60);
+        window.addEventListener('scroll', markScrolled, { passive: true });
+        markScrolled();
+
+        // ── Mobile menu ───────────────────────────────────────
+        const hamburger = document.getElementById('hamburger');
+        const navLinks  = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            const open = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', String(!open));
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }));
+
+        // ── Scroll reveal ─────────────────────────────────────
+        const revealObs = new IntersectionObserver((entries) => {
+            entries.forEach(({ isIntersecting, target }) => {
+                if (!isIntersecting) return;
+                target.classList.add('revealed');
+                revealObs.unobserve(target);
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        const attachReveal = (root = document) =>
+            root.querySelectorAll('.reveal:not(.revealed)').forEach(el => revealObs.observe(el));
+        attachReveal();
+
+        // Stagger siblings inside grid containers
+        document.querySelectorAll('.features__grid, .menu__grid, .events__grid, .about__cards, .origin__region-list').forEach(grid => {
+            [...grid.children].forEach((child, i) => { child.style.transitionDelay = `${i * 75}ms`; });
+        });
+
+        // ── Counter animation ─────────────────────────────────
+        const easeOut = t => 1 - Math.pow(1 - t, 3);
+        const counterObs = new IntersectionObserver((entries) => {
+            entries.forEach(({ isIntersecting, target }) => {
+                if (!isIntersecting) return;
+                const end = parseInt(target.dataset.count, 10);
+                const duration = 1400;
+                const t0 = performance.now();
+                const tick = (now) => {
+                    const p = Math.min((now - t0) / duration, 1);
+                    target.textContent = Math.round(easeOut(p) * end);
+                    if (p < 1) requestAnimationFrame(tick);
+                };
+                requestAnimationFrame(tick);
+                counterObs.unobserve(target);
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.stat-num').forEach(el => counterObs.observe(el));
+
+        // ── Menu tabs ─────────────────────────────────────────
+        document.querySelectorAll('.menu__tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.menu__tab').forEach(t => { t.classList.remove('menu__tab--active'); t.setAttribute('aria-selected', 'false'); });
+                document.querySelectorAll('.menu__panel').forEach(p => p.classList.remove('menu__panel--active'));
+                tab.classList.add('menu__tab--active');
+                tab.setAttribute('aria-selected', 'true');
+                const panel = document.getElementById(`tab-${tab.dataset.tab}`);
+                panel.classList.add('menu__panel--active');
+                attachReveal(panel);
+            });
+        });
+
+        // ── Active nav link on scroll ─────────────────────────
+        const sections = document.querySelectorAll('section[id]');
+        const links = document.querySelectorAll('.nav__link');
+        const sectionObs = new IntersectionObserver((entries) => {
+            entries.forEach(({ isIntersecting, target }) => {
+                if (!isIntersecting) return;
+                links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${target.id}`));
+            });
+        }, { threshold: 0.4 });
+        sections.forEach(s => sectionObs.observe(s));
+
+        // ── Contact form ──────────────────────────────────────
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('[type="submit"]');
+            const orig = btn.textContent;
+            btn.textContent = 'Message Sent ✓';
+            btn.disabled = true;
+            setTimeout(() => { btn.textContent = orig; btn.disabled = false; e.target.reset(); }, 3500);
+        });
+    })();
+    </script>
 </body>
 </html>
