@@ -709,6 +709,12 @@ ul  { list-style: none; }
     flex-direction: column;
 }
 
+.stat-row {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
 .stat-num, .stat-suffix {
     font-family: var(--ff-head);
     font-size: 2.4rem;
@@ -1510,8 +1516,10 @@ ul  { list-style: none; }
                         <span class="stat-label">Farm Partners</span>
                     </div>
                     <div class="origin__stat">
-                        <span class="stat-num" data-count="140">0</span><span class="stat-suffix">%</span>
-                        <span class="stat-label">of Fair Trade Min.</span>
+                        <div class="stat-row">
+                            <span class="stat-num" data-count="40">0</span><span class="stat-suffix">%</span>
+                        </div>
+                        <span class="stat-label">Above Fair Trade</span>
                     </div>
                 </div>
                 <a href="#about" class="btn btn--outline">Our Full Story &rarr;</a>
