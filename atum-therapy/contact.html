@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Atum Therapy</title>
+  <meta name="description" content="Get in touch with Atum Therapy. Schedule a session with David Lancaster or ask us anything about ATUM THERAPY." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="https://atumtherapy.com/wp-content/uploads/2023/11/Atum-Therapy-Logo-Custom.png" alt="Atum Therapy" />
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<!-- ===== BANNER ===== -->
+<img
+  class="page-banner"
+  src="https://atumtherapy.com/wp-content/uploads/2023/11/Switzerland-Mountain-Banner.jpg"
+  alt="Mountain landscape banner"
+/>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section>
+  <div class="container">
+    <div class="two-col">
+
+      <!-- Left: Info -->
+      <div>
+        <h1>Contact Us for Your Healing Journey</h1>
+        <p style="margin-top:1rem;">
+          We'd love to hear from you. Whether you have questions about ATUM THERAPY, want to share your story, or are ready to schedule a session with David Lancaster, we're here to support you.
+        </p>
+        <p>
+          Use the contact form or send us an email to get started. We're honored to walk with you on your path to healing, and we're committed to creating a supportive, nurturing space every step of the way.
+        </p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:contact@atumtherapy.com">contact@atumtherapy.com</a>
+        </p>
+        <p>
+          <strong>Phone / Text:</strong> <a href="tel:5612547367">561-254-7367</a>
+        </p>
+
+        <div style="margin-top:2rem;">
+          <a href="https://calendly.com/atumtherapy/15min" class="btn btn-primary" target="_blank" rel="noopener">
+            Book a Free Introductory Consultation
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div>
+        <div class="contact-form">
+          <h2 style="margin-bottom:1.5rem;">Send a Message</h2>
+          <form id="contactForm" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="first_name" placeholder="First Name" />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="last_name" placeholder="Last Name" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email <span class="required-star" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="Email Address" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="Phone Number" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span class="required-star" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">Submit</button>
+
+            <p id="formSuccess" style="display:none; margin-top:1rem; color:green; font-weight:500;">
+              Thank you! Your message has been sent. We'll be in touch soon.
+            </p>
+            <p id="formError" style="display:none; margin-top:1rem; color:#e53e3e; font-weight:500;">
+              Please fill in all required fields.
+            </p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <p>Copyright &copy; 2026 Atum Therapy</p>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+
+  // Basic contact form validation (no backend — demo only)
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const success = document.getElementById('formSuccess');
+    const error = document.getElementById('formError');
+    success.style.display = 'none';
+    error.style.display = 'none';
+    if (!email || !message) {
+      error.style.display = 'block';
+      return;
+    }
+    success.style.display = 'block';
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
